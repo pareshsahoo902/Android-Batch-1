@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="25dp"
+        android:fontFamily="sans-serif-black"
+        android:gravity="center"
+        android:text="Your Profile"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="22dp"
+        />
+
+
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_below="@+id/textView"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circular_image"
+        android:src="@drawable/ic_launcher_foreground"
+
+        android:scaleType="fitXY"/>
+
+
+
+    <EditText
+        android:id="@+id/edit"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:textSize="20dp"
+        android:textColor="@color/black"
+        android:hint="Search"
+        android:inputType="phone"
+        android:layout_marginTop="25dp"
+        android:elevation="4dp"
+        android:drawableEnd="@drawable/ic_baseline_search_24"
+        android:drawablePadding="10dp"
+        android:paddingEnd="20dp"
+        android:drawableTint="#ddd"
+        android:layout_marginLeft="20dp"
+        android:paddingStart="20dp"
+        android:layout_marginRight="20dp"
+        android:maxLength="10"
+        android:background="@drawable/searchbg"
+        android:layout_below="@+id/image"
+        android:layout_centerHorizontal="true"
+       />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/dome"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/edit"
+        app:passwordToggleEnabled="true"
+        app:passwordToggleTint="@color/teal_700"
+        app:errorEnabled="true"
+        >
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/register"
+            android:inputType="textPassword"
+            />
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+
+    <ImageView
+        android:id="@+id/like"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:src="@drawable/ic_baseline_thumb_down_24"
+        android:tint="@color/teal_700"
+        android:layout_below="@+id/dome"
+        android:layout_marginTop="10dp"
+        android:layout_centerHorizontal="true"
+        />
+
+    <Button
+        android:id="@+id/login"
+        android:layout_width="200dp"
+        android:layout_height="50dp"
+        android:text="Login"
+        style="@style/appCustomButton"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="40dp"
+        />
+
+
+
+
+</RelativeLayout>

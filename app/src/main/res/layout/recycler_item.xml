@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="8dp"
+    app:cardElevation="4dp"
+    android:padding="5dp"
+    android:layout_margin="3dp">
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="70dp"
+        android:layout_height="95dp"
+        android:elevation="2dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/oroe"
+        android:layout_margin="10dp"
+        />
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="3dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="10dp"
+        >
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Oreo Chocolate"
+            android:textStyle="bold"
+            android:textSize="16dp"
+            android:textColor="#161616"
+            />
+        <TextView
+            android:id="@+id/desc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Delicious oreo diped in some shit."
+            android:textSize="14dp"
+            android:layout_marginBottom="15dp"
+            />
+        <TextView
+            android:id="@+id/price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rs. 127"
+            android:textStyle="bold"
+            android:textSize="18dp"
+            android:textColor="@android:color/holo_red_light"
+            />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/addBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add "
+        android:textSize="16dp"
+        android:drawableEnd="@drawable/ic_baseline_add_24"
+        android:layout_marginBottom="15dp"
+        android:textColor="@color/white"
+        android:drawableTint="@color/white"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="20dp"
+        android:textStyle="bold"
+        android:background="@color/teal_700"
+        android:paddingLeft="9dp"
+        android:paddingRight="6dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+
+
+        />
+
+
+
+
+</androidx.cardview.widget.CardView>
