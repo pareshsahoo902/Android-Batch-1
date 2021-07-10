@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/otpText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="Enter Your OTP"
+        android:textSize="23dp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-black"
+        />
+
+    <EditText
+        android:layout_width="280dp"
+        android:layout_height="60dp"
+        android:textSize="18sp"
+        android:layout_marginTop="30dp"
+        android:layout_below="@+id/otpText"
+        android:layout_centerHorizontal="true"
+        android:maxLength="6"
+        android:lines="1"
+        android:paddingStart="15dp"
+        android:hint="Enter the OTP"
+        android:elevation="6dp"
+        android:background="@drawable/searchbg"
+        android:id="@+id/otpEditText"
+        />
+
+    <Button
+        android:id="@+id/otpBtn"
+        android:layout_width="130dp"
+        android:layout_height="45dp"
+        android:text="Verify OTP"
+        android:textSize="15dp"
+        android:textStyle="bold"
+        android:layout_below="@+id/otpEditText"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="30dp"
+        style="@style/appCustomButton"
+        android:layout_centerHorizontal="true"
+        />
+
+
+</RelativeLayout>

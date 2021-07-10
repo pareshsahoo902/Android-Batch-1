@@ -16,6 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.material.textfield.TextInputEditText;
+import com.release.demoapk.Fragment.OtpBottomFragment;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -35,29 +36,7 @@ public class MainActivity extends AppCompatActivity {
         edit = findViewById(R.id.edit);
         login = findViewById(R.id.login);
 
-        login.setEnabled(false);
-        
-        edit.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-                
-            }
 
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                if (edit.getText().toString().length()>=10){
-                    Toast.makeText(MainActivity.this, "Valid!", Toast.LENGTH_SHORT).show();
-                    login.setEnabled(true);
-                }else{
-                    login.setEnabled(false);
-                }
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
 
 
         edit.setOnFocusChangeListener(new View.OnFocusChangeListener() {
@@ -97,23 +76,8 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
 
 
-                loginUser();
-
-
-                Student s = new Student("paresh","23","a","89");
-
-                Bundle bundle =  new Bundle();
-                bundle.putSerializable("data",s);
-
-                Intent homeIntent = new Intent(MainActivity.this,HomePage.class);
-                homeIntent.setFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-              homeIntent.putExtras(bundle);
-//                homeIntent.putExtra("name",edit.getText().toString());
-                startActivity(homeIntent);
-                finish();
-
-//                startActivity(new Intent(MainActivity.this,HomePage.class));
-
+                OtpBottomFragment fragment = new OtpBottomFragment();
+                fragment.show(getSupportFragmentManager(),"Get the Otp");
             }
 
 
@@ -133,15 +97,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void loginUser() {
 
-        //Step1 VAlidate
-        //Step 2 Api call
-//        it returns a response
-//        if no error
-        Intent homeIntent = new Intent(MainActivity.this,HomePage.class);
-        homeIntent.setFlags( Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//              homeIntent.putExtras(bundle);
-        startActivity(homeIntent);
-        finish();
 
     }
 
