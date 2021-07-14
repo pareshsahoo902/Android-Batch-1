@@ -10,19 +10,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoAPK">
-        <activity android:name=".RecyclerViews.RecyclerActivity">
-
-        </activity>
-        <activity android:name=".regiterActivty">
-
-        </activity>
-        <activity android:name=".HomePage" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".SharedPrefActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity
+            android:name=".BottomTab"
+            android:label="@string/title_activity_bottom_tab" />
+        <activity android:name=".RecyclerViews.RecyclerActivity" />
+        <activity android:name=".regiterActivty" />
+        <activity android:name=".HomePage" />
+        <activity android:name=".MainActivity">
+
         </activity>
     </application>
 
